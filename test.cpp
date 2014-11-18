@@ -2,6 +2,7 @@
 #include <fstream>
 #include "mnist_loader.hpp"
 #include "util.hpp"
+#include "knn.hpp"
 
 using namespace std;
 
@@ -18,10 +19,15 @@ int main(int argc, char **argv){
 	const unsigned char* labels = loader.train_labels();
 	int w = loader.width();
 	int h = loader.height();
-	for(int i=0; i<10; i++){
-		char buf[128];
-		sprintf(buf, "%d.pgm", i);
-		Util::save_pgm(buf, data + w*h*i, w, h, true);
-		cout << (int)labels[i] << endl;
-	}
+
+	//char buf[128];
+	//sprintf(buf, "test%d.pgm", 0);
+	//Util::save_pgm(buf, loader.test_data() + w*h*0, w, h, true);
+
+	KNN knn(3);
+	knn.batch_classify(12, loader.test_data(), loader.test_size(), \
+		loader.train_data(), loader.train_size(), 
+		loader.feature_size(), \
+		loader.train_labels(), loader.test_labels());
+
 }

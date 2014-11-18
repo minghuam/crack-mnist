@@ -94,6 +94,8 @@ public:
 	int width() const { return _width; }
 	int height() const { return _height; }
 	int feature_size() const { return _width * _height; }
+	int test_size() const { return _test_size; }
+	int train_size() const { return _train_size; }
 	const unsigned char* train_data() const { return _train_data; }
 	const unsigned char* train_labels() const { return _train_labels; }
 	const unsigned char* test_data() const { return _test_data; }
