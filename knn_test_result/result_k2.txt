@@ -1,0 +1,15 @@
+batch: 0 , 805/833
+batch: 1 , 796/833
+batch: 2 , 784/833
+batch: 3 , 804/833
+batch: 4 , 793/833
+batch: 5 , 795/833
+batch: 6 , 820/833
+batch: 7 , 808/833
+batch: 8 , 825/833
+batch: 9 , 823/833
+batch: 10 , 825/833
+batch: 11 , 813/833
+total: 9691/10000
+accuracy: 0.9691
+time: 412.138 seconds.

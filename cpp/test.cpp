@@ -24,7 +24,7 @@ int main(int argc, char **argv){
 	//sprintf(buf, "test%d.pgm", 0);
 	//Util::save_pgm(buf, loader.test_data() + w*h*0, w, h, true);
 
-	KNN knn(3);
+	KNN knn(8);
 	knn.batch_classify(12, loader.test_data(), loader.test_size(), \
 		loader.train_data(), loader.train_size(), 
 		loader.feature_size(), \
